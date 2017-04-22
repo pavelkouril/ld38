@@ -7,11 +7,21 @@ namespace RUF
     public class ForceField : MonoBehaviour
     {
         public ForceFieldColors.Values FFColor;
+        private float mPhase;
+        private Material mMaterial;
 
         private void Start()
         {
-            GetComponent<Renderer>().material.color = ForceFieldColors.ConvertToColor(FFColor);
+            mMaterial = GetComponent<Renderer>().material;
             gameObject.layer = ForceFieldColors.ConvertToPhysicsLayer(FFColor);
+            mPhase = 0.0f;
+        }
+
+        public void Update()
+        {
+            mMaterial.SetColor("_Color", ForceFieldColors.ConvertToColor(FFColor));
+            mMaterial.SetFloat("_Offset", mPhase);
+            mPhase += Time.deltaTime;
         }
     }
 }
