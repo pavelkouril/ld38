@@ -13,12 +13,12 @@ public class TeleportHand : MonoBehaviour
     {       
         if (IsAnimating)
         {
-            var angle = (Force + Acc * 5);
-            if (angle > 5f)
+            Force = (Force + Acc / 4);
+            if (Force > 1500)
             {
-                angle = 5f;
+                Force = 1500;
             }
-            transform.Rotate(0, angle * Time.deltaTime, 0);
+            transform.Rotate(0, Force * Time.deltaTime, 0);
         }
     }
 }
