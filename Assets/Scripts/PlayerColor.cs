@@ -8,12 +8,12 @@ namespace RUF
     public class PlayerColor : MonoBehaviour
     {
         public ForceFieldColors.Values FFColor;
-
-        private ForceFieldColors.Values nextColor;
+        public float RemainingTime = 0.1f;
+        public ForceFieldColors.Values NextColor;
 
         private void Start()
         {
-            nextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
+            NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
             StartCoroutine(SwitchColor());
         }
 
@@ -21,13 +21,18 @@ namespace RUF
         {
             while (true)
             {
-                FFColor = nextColor;
-                do
+                RemainingTime -= 0.1f;
+                if (RemainingTime <= 0)
                 {
-                    nextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
-                } while (nextColor == FFColor);
-                gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
-                yield return new WaitForSeconds(2);
+                    RemainingTime = UnityEngine.Random.Range(2, 3);
+                    FFColor = NextColor;
+                    do
+                    {
+                        NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
+                    } while (NextColor == FFColor);
+                    gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
+                }
+                yield return new WaitForSeconds(0.1f);
             }
         }
     }
