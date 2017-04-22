@@ -27,7 +27,7 @@ namespace RUF
                     nextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
                 } while (nextColor == FFColor);
                 gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(2);
             }
         }
     }

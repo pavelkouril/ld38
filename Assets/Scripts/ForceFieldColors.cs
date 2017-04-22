@@ -17,17 +17,17 @@ namespace RUF
         {
             if (ffColor == Values.Cyan)
             {
-                return new Color(0.75f, 1, 1, 0.5f);
+                return new Color(0f, 1, 1);
             }
             if (ffColor == Values.Purple)
             {
-                return new Color(0.8f, 0.45f, 0.8f, 0.5f);
+                return new Color(0.8f, 0.45f, 0.8f);
             }
             if (ffColor == Values.Yellow)
             {
-                return new Color(1, 1, 0, 0.5f);
+                return new Color(1, 1, 0);
             }
-            return new Color(0, 0, 0, 0.5f);
+            return new Color(0, 0, 0);
         }
 
         public static int ConvertToPhysicsLayer(Values ffColor)
