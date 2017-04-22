@@ -15,6 +15,10 @@ public class Teleport : MonoBehaviour
             {
                 c.isTrigger = false;
             }
+            foreach (var hand in GetComponentsInChildren<TeleportHand>())
+            {
+                hand.IsAnimating = true;
+            }
         }
     }
 }
