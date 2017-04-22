@@ -16,6 +16,7 @@
 	{
 		Tags { "RenderType"="Transparent" }
 		Blend SrcAlpha OneMinusSrcAlpha
+		Cull Off
 		LOD 100
 
 		Pass
