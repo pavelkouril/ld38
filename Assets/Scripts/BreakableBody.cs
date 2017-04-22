@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RUF
 {
-    public class BreakableBody: MonoBehaviour
+    public class BreakableBody : MonoBehaviour
     {
         private void OnTriggerExit(Collider other)
         {

@@ -11,10 +11,29 @@ namespace RUF
         public float RemainingTime = 0.1f;
         public ForceFieldColors.Values NextColor;
 
-        private void Start()
+        private IEnumerator switchColCoroutine;
+
+        private void Awake()
         {
+            switchColCoroutine = SwitchColor();
             NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
-            StartCoroutine(SwitchColor());
+            StartCoroutine(switchColCoroutine);
+        }
+       
+        public void ForceColor(ForceFieldColors.Values col)
+        {
+            StopCoroutine(switchColCoroutine);
+            FFColor = col;
+            gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
+            do
+            {
+                NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
+            } while (NextColor == FFColor);
+        }
+
+        public void StartColorSwitching()
+        {
+            StartCoroutine(switchColCoroutine);
         }
 
         private IEnumerator SwitchColor()
