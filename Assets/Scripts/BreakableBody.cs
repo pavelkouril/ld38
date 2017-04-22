@@ -6,19 +6,25 @@ namespace RUF
 {
     public class BreakableBody : MonoBehaviour
     {
+        public GameObject OriginalObject;
+        public GameObject ReplaceObject;
+
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag("Destroyer"))
             {
-                var body = GetComponent<Rigidbody>();
                 if (tag == "Wall")
                 {
-                    var coroutine = ApplyGravityCouritine(body);
-                    StartCoroutine(coroutine);
+                    ApplyGravityOnBody(GetComponent<Rigidbody>());
                 }
                 else
                 {
-                    ApplyGravityOnBody(body);
+                    OriginalObject.SetActive(false);
+                    ReplaceObject.SetActive(true);
+                    foreach (var rb in GetComponentsInChildren<Rigidbody>())
+                    {
+                        ApplyGravityOnBody(rb);
+                    }
                 }
             }
         }
@@ -28,13 +34,6 @@ namespace RUF
             body.isKinematic = false;
             body.useGravity = true;
             body.AddForce(new Vector3(0, Random.value * 100f, 0));
-        }
-
-        private IEnumerator ApplyGravityCouritine(Rigidbody wall)
-        {
-            yield return new WaitForSeconds(1.8f);
-
-            ApplyGravityOnBody(wall);
         }
     }
 }
