@@ -685,8 +685,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAnimating: 0
-  Force: 6
-  Acc: 3
+  Force: 8
+  Acc: 2
 --- !u!114 &114357745086633806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -699,8 +699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAnimating: 0
-  Force: 5
-  Acc: 5
+  Force: 10
+  Acc: 2
 --- !u!114 &114391148131862332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsAnimating: 0
   Force: 2
-  Acc: 4
+  Acc: 2
 --- !u!114 &114745645653380612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAnimating: 0
-  Force: 5
+  Force: 9
   Acc: 2
 --- !u!114 &114850460965227290
 MonoBehaviour:
@@ -741,5 +741,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAnimating: 0
-  Force: 4
-  Acc: 7
+  Force: 15
+  Acc: 2

@@ -9,7 +9,6 @@ public class Teleport : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("You win, you fool.");
             yield return new WaitForSeconds(0.5f);
             foreach (var c in GetComponents<Collider>())
             {

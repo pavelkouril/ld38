@@ -13,19 +13,12 @@ public class TeleportHand : MonoBehaviour
     {       
         if (IsAnimating)
         {
-            Debug.Log("IsAnimating");
-
-            StartCoroutine(Animate());
-        }
-    }
-
-    private IEnumerator Animate()
-    {
-        while (true)
-        {
-            transform.Rotate(0, Mathf.Max(0.001f, Force / 1000 + Acc / 100), 0);
-
-            yield return new WaitForSeconds(0.05f);
+            var angle = (Force + Acc * 5);
+            if (angle > 5f)
+            {
+                angle = 5f;
+            }
+            transform.Rotate(0, angle * Time.deltaTime, 0);
         }
     }
 }
