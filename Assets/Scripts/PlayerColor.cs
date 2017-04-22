@@ -24,7 +24,7 @@ namespace RUF
                 RemainingTime -= 0.1f;
                 if (RemainingTime <= 0)
                 {
-                    RemainingTime = UnityEngine.Random.Range(2, 3);
+                    RemainingTime = UnityEngine.Random.Range(2f, 3f);
                     FFColor = NextColor;
                     gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
 
