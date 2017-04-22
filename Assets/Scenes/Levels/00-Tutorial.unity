@@ -9679,61 +9679,6 @@ Prefab:
       propertyPath: m_Name
       value: Teleport (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 65463889292766302, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65463889292766302, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65190570889739456, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65190570889739456, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65603960211816860, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65603960211816860, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65387479968934572, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 65387479968934572, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65387479968934572, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 65387479968934572, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Size.x
-      value: -0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65387479968934572, guid: b31f084b27b865945be8f76a41a3449f,
-        type: 2}
-      propertyPath: m_Center.x
-      value: -0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b31f084b27b865945be8f76a41a3449f, type: 2}
   m_IsPrefabParent: 0
