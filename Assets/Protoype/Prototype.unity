@@ -14329,6 +14329,11 @@ Prefab:
       propertyPath: m_Name
       value: Teleport (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114745645653380612, guid: b31f084b27b865945be8f76a41a3449f,
+        type: 2}
+      propertyPath: IsAnimating
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b31f084b27b865945be8f76a41a3449f, type: 2}
   m_IsPrefabParent: 0
