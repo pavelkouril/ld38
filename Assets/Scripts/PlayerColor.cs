@@ -26,11 +26,12 @@ namespace RUF
                 {
                     RemainingTime = UnityEngine.Random.Range(2, 3);
                     FFColor = NextColor;
+                    gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
+
                     do
                     {
                         NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
                     } while (NextColor == FFColor);
-                    gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
                 }
                 yield return new WaitForSeconds(0.1f);
             }
