@@ -23,7 +23,7 @@ namespace RUF
             while (true)
             {
                 collider.size = collider.size - new Vector3(1, 1, 1);
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(1.5f);
             }
         }
     }

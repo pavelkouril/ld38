@@ -8,11 +8,11 @@ namespace RUF
     {
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("collide");
             if (other.CompareTag("Destroyer"))
             {
-                Debug.Log("collide");
-                Destroy(this.gameObject);
+                GetComponent<Rigidbody>().isKinematic = false;
+                GetComponent<Rigidbody>().useGravity = true;
+                GetComponent<Rigidbody>().AddForce(new Vector3(0, Random.value * 100f, 0));
             }
         }
     }
