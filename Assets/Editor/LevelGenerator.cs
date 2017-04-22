@@ -10,10 +10,7 @@ public class LevelGenerator
     static void Create()
     {
         Object ground = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/GroundTile.prefab", typeof(GameObject));
-        Object wall_D = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall_D.prefab", typeof(GameObject));
-        Object wall_U = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall_U.prefab", typeof(GameObject));
-        Object wall_R = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall_R.prefab", typeof(GameObject));
-        Object wall_L = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall_L.prefab", typeof(GameObject));
+        Object wall = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall.prefab", typeof(GameObject));
 
         const int SIZE = 8;
 
@@ -38,28 +35,31 @@ public class LevelGenerator
                 var arrZ = z + SIZE * 2;
 
                 var currentChar = level1Data[arrZ][arrX];
+
                 if (currentChar == '-')
                 {
+                    var obj = GameObject.Instantiate(wall, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform) as GameObject;
+                    obj.transform.eulerAngles = new Vector3(0, 90, 0);
                     if (z > 0)
                     {
-                        Object.Instantiate(wall_U, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform);
+                        obj.transform.position += new Vector3(-0.5f, 0, -1);
                     }
                     if (z < 0)
                     {
-                        Object.Instantiate(wall_D, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform);
+                        obj.transform.position += new Vector3(-0.5f, 0, 0);
                     }
                 }
 
                 if (currentChar == '|')
                 {
+                    var obj = GameObject.Instantiate(wall, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform) as GameObject;
                     if (x < 0)
                     {
-                        Object.Instantiate(wall_L, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform);
+                        obj.transform.position += new Vector3(0, 0, -0.5f);
                     }
-
                     if (x > 0)
                     {
-                        Object.Instantiate(wall_R, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform);
+                        obj.transform.position += new Vector3(-1, 0, -0.5f);
                     }
                 }
             }
