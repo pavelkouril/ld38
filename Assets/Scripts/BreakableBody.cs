@@ -10,10 +10,31 @@ namespace RUF
         {
             if (other.CompareTag("Destroyer"))
             {
-                GetComponent<Rigidbody>().isKinematic = false;
-                GetComponent<Rigidbody>().useGravity = true;
-                GetComponent<Rigidbody>().AddForce(new Vector3(0, Random.value * 100f, 0));
+                var body = GetComponent<Rigidbody>();
+                if (tag == "Wall")
+                {
+                    var coroutine = ApplyGravityCouritine(body);
+                    StartCoroutine(coroutine);
+                }
+                else
+                {
+                    ApplyGravityOnBody(body);
+                }
             }
+        }
+
+        private void ApplyGravityOnBody(Rigidbody body)
+        {
+            body.isKinematic = false;
+            body.useGravity = true;
+            body.AddForce(new Vector3(0, Random.value * 100f, 0));
+        }
+
+        private IEnumerator ApplyGravityCouritine(Rigidbody wall)
+        {
+            yield return new WaitForSeconds(1.8f);
+
+            ApplyGravityOnBody(wall);
         }
     }
 }

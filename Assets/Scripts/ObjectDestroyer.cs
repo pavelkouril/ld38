@@ -22,8 +22,16 @@ namespace RUF
         {
             while (true)
             {
-                collider.size = collider.size - new Vector3(1, 1, 1);
-                yield return new WaitForSeconds(1.5f);
+                if (collider.size.x > 1)
+                {
+                    collider.size = collider.size - new Vector3(1, 1, 1);
+                }
+                else
+                {
+                    break;
+                }
+                
+                yield return new WaitForSeconds(1.8f);
             }
         }
     }
