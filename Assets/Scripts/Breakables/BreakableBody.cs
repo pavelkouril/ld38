@@ -33,7 +33,7 @@ namespace RUF.Breakables
                             rb.isKinematic = true;
                             rb.useGravity = false;
                             mBodies.Add(rb);
-                            mOffsets.Add(Time.time + Random.value * 2.5f);
+                            mOffsets.Add(Time.time + Random.value * 1.25f);
                         }
                         else
                         {

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,11 +12,32 @@ public class UIManager : MonoBehaviour
     public Image nextColor;
     public PlayerColor playerColor;
 
-    // Update is called once per frame
+    public List<string> DieTexts = new List<string>();
+
+    public GameObject DiePanel;
+    public Text DieTextFlavor;
+
+    private bool canRestartLevel;
+
     void Update()
     {
         color.color = ForceFieldColors.ConvertToColor(playerColor.FFColor);
         nextColor.color = ForceFieldColors.ConvertToColor(playerColor.NextColor);
         timeRemaingText.text = playerColor.RemainingTime.ToString("0.0");
+    }
+
+    public void ShowCompleteScreen()
+    {
+
+    }
+
+    public void ShowDieScreen()
+    {
+        DiePanel.SetActive(true);
+        DieTextFlavor.text = DieTexts[UnityEngine.Random.Range(0, DieTexts.Count)];
+        LeanTween.alpha(DiePanel.GetComponent<RectTransform>(), 1, 1).setUseEstimatedTime(true).setOnComplete(() =>
+        {
+            canRestartLevel = true;
+        });
     }
 }
