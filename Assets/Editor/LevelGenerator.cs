@@ -6,17 +6,30 @@ using System.IO;
 
 public class LevelGenerator
 {
-    [MenuItem("MyTools/LevelGenerator")]
-    static void Create()
+    [MenuItem("MyTools/LevelGenerator1")]
+    static void CreateLevel1()
+    {
+        Create("Level1.txt");
+    }
+
+
+    [MenuItem("MyTools/LevelGenerator2")]
+    static void CreateLevel2()
+    {
+        Create("Level2.txt");
+    }
+
+
+    static void Create(string name)
     {
         Object ground = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/GroundTile.prefab", typeof(GameObject));
         Object wall = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall.prefab", typeof(GameObject));
 
-        const int SIZE = 8;
-
         var groundParent = new GameObject("Ground");
 
-        var level1Data = File.ReadAllLines("Assets/LevelData/Level1.txt");
+        var level1Data = File.ReadAllLines("Assets/LevelData/" + name);
+        int SIZE = level1Data.Length / 4;
+
         var wallsParent = new GameObject("Wall");
 
         for (int x = -SIZE; x < SIZE; x++)
