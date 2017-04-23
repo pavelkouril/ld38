@@ -78,6 +78,7 @@ public class UIManager : MonoBehaviour
         {
             if (!AllowKeyInputs)
             {
+                IntroTextPanel.SetActive(false);
                 LeanTween.alpha(IntroTextPanel.GetComponent<RectTransform>(), 0, 1).setUseEstimatedTime(true).setOnComplete(() =>
                 {
                     IntroTextPanel.SetActive(false);
@@ -150,7 +151,8 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            LeanTween.alpha(IntroTextPanel.GetComponent<RectTransform>(), 0, 1).setUseEstimatedTime(true).setOnComplete(() =>
+            IntroTextPanel.SetActive(false);
+            LeanTween.alpha(IntroTextPanel.GetComponent<RectTransform>(), 0, 1f).setUseEstimatedTime(true).setOnComplete(() =>
             {
                 IntroTextPanel.SetActive(false);
                 AllowKeyInputs = true;
