@@ -52,7 +52,10 @@ public class ThirdPersonCamera : MonoBehaviour
         occludeRay(ref targetOffset);
         smoothCamMethod();
 
-        transform.LookAt(target);
+        var targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 4.0f * Time.deltaTime);
+
+//        transform.LookAt(target);
 
         #region wrap the cam orbit rotation
         if (rotateAround > 360)
