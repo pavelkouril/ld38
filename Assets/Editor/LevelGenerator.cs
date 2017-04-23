@@ -27,6 +27,13 @@ public class LevelGenerator
     }
 
 
+    [MenuItem("MyTools/GenerateLevel4")]
+    static void CreateLevel4()
+    {
+        Create("Level4.txt");
+    }
+
+
     static void Create(string name)
     {
         Object ground = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/GroundTile.prefab", typeof(GameObject));
@@ -43,7 +50,9 @@ public class LevelGenerator
         {
             for (int z = -SIZE; z < SIZE; z++)
             {
-                Object.Instantiate(ground, new Vector3(x * 2, 0, z * 2), Quaternion.identity, groundParent.transform);
+                GameObject obj = PrefabUtility.InstantiatePrefab(ground) as GameObject;
+                obj.transform.parent = groundParent.transform;
+                obj.transform.position = new Vector3(x * 2, 0, z * 2);
             }
         }
 
@@ -58,7 +67,9 @@ public class LevelGenerator
 
                 if (currentChar == '-')
                 {
-                    var obj = GameObject.Instantiate(wall, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform) as GameObject;
+                    GameObject obj = PrefabUtility.InstantiatePrefab(wall) as GameObject;
+                    obj.transform.parent = wallsParent.transform;
+                    obj.transform.position = new Vector3(x, 0, z);
                     obj.transform.eulerAngles = new Vector3(0, 90, 0);
                     if (z > 0)
                     {
@@ -72,7 +83,9 @@ public class LevelGenerator
 
                 if (currentChar == '|')
                 {
-                    var obj = GameObject.Instantiate(wall, new Vector3(x, 0, z), Quaternion.identity, wallsParent.transform) as GameObject;
+                    GameObject obj = PrefabUtility.InstantiatePrefab(wall) as GameObject;
+                    obj.transform.parent = wallsParent.transform;
+                    obj.transform.position = new Vector3(x, 0, z);
                     if (x < 0)
                     {
                         obj.transform.position += new Vector3(0, 0, -0.5f);
