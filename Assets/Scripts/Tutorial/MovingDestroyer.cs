@@ -6,6 +6,8 @@ namespace RUF.Tutorial
 {
     public class MovingDestroyer : MonoBehaviour
     {
+        public float Speed = 4.25f;
+
         public Transform target;
 
         private void Update()

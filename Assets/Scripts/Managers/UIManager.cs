@@ -54,11 +54,13 @@ public class UIManager : MonoBehaviour
         if (IntroTexts.Count > 0)
         {
             IntroTextPanel.SetActive(true);
+            Time.timeScale = 0;
             ShowBeggining(0);
             AllowKeyInputs = false;
         }
         else
         {
+            Time.timeScale = 1;
             AllowKeyInputs = true;
             IntroTextPanel.SetActive(false);
         }
@@ -80,6 +82,7 @@ public class UIManager : MonoBehaviour
                 {
                     IntroTextPanel.SetActive(false);
                     AllowKeyInputs = true;
+                    Time.timeScale = 1;
                 });
             }
             else if (!PreventPauseMenu && !PauseMenu.activeSelf)
@@ -151,6 +154,7 @@ public class UIManager : MonoBehaviour
             {
                 IntroTextPanel.SetActive(false);
                 AllowKeyInputs = true;
+                Time.timeScale = 1;
             });
         }
     }
