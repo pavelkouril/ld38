@@ -7543,6 +7543,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114716691762779842, guid: 0f78449f749cc1f448bf941517295c48,
+        type: 2}
+      propertyPath: FFColor
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
   m_IsPrefabParent: 0
@@ -9651,7 +9656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000061035156, y: 71.78137}
+  m_AnchoredPosition: {x: -0.000061035156, y: 71.78125}
   m_SizeDelta: {x: 550, y: 65.45}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1063505132
@@ -9790,7 +9795,7 @@ Prefab:
     - target: {fileID: 114716691762779842, guid: 0f78449f749cc1f448bf941517295c48,
         type: 2}
       propertyPath: FFColor
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
@@ -14852,7 +14857,7 @@ Prefab:
     - target: {fileID: 114716691762779842, guid: 0f78449f749cc1f448bf941517295c48,
         type: 2}
       propertyPath: FFColor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
