@@ -6,17 +6,24 @@ using System.IO;
 
 public class LevelGenerator
 {
-    [MenuItem("MyTools/LevelGenerator1")]
+    [MenuItem("MyTools/GenerateLevel16x16")]
     static void CreateLevel1()
     {
         Create("Level1.txt");
     }
 
 
-    [MenuItem("MyTools/LevelGenerator2")]
+    [MenuItem("MyTools/GenerateLevel24x24")]
     static void CreateLevel2()
     {
         Create("Level2.txt");
+    }
+
+
+    [MenuItem("MyTools/GenerateLevel32x32")]
+    static void CreateLevel3()
+    {
+        Create("Level3.txt");
     }
 
 
