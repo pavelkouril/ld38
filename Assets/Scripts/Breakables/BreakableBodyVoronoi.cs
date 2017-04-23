@@ -10,6 +10,7 @@ namespace RUF.Breakables
         public GameObject ReplaceObject;
         private List<Rigidbody> mBodies;
         private List<float> mOffsets;
+        private List<GameObject> fractures = new List<GameObject>();
 
         private void OnTriggerExit(Collider other)
         {
@@ -27,6 +28,7 @@ namespace RUF.Breakables
                         rb.isKinematic = true;
                         rb.useGravity = false;
                         mBodies.Add(rb);
+                        fractures.Add(rb.gameObject);
                         mOffsets.Add(Time.time + Random.value * 1.25f);
                     }
                     else
@@ -62,6 +64,18 @@ namespace RUF.Breakables
                 if (remove.Count == mBodies.Count)
                 {
                     mBodies = null;
+                }
+            }
+
+            if (fractures.Count > 0)
+            {
+                for (int i = fractures.Count - 1; i >= 0; i--)
+                {
+                    if (fractures[i].transform.position.y < -40)
+                    {
+                        Destroy(fractures[i]);
+                        fractures.RemoveAt(i);
+                    }
                 }
             }
         }
