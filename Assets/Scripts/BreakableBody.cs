@@ -35,6 +35,11 @@ namespace RUF
                             mBodies.Add(rb);
                             mOffsets.Add(Time.time + Random.value * 2.5f);
                         }
+                        else
+                        {
+                            Destroy(gameObject.GetComponent<Rigidbody>());
+                            Destroy(gameObject.GetComponent<Collider>());
+                        }
                     }
                 }
             }
