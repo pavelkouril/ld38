@@ -5293,6 +5293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27df9ddf8899fd64e89b243959ba1d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 4.25
   target: {fileID: 76598658}
 --- !u!1001 &1035767698
 Prefab:

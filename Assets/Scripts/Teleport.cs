@@ -7,6 +7,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class Teleport : MonoBehaviour
 {
     public LevelManager levelManager;
+    public ParticleSystem Particles;
 
     private IEnumerator OnTriggerEnter(Collider other)
     {
@@ -21,6 +22,8 @@ public class Teleport : MonoBehaviour
             {
                 hand.IsAnimating = true;
             }
+            Particles.gameObject.SetActive(true);
+            Particles.Play();
             yield return new WaitForSeconds(2);
             levelManager.LevelComplete();
         }
