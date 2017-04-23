@@ -6690,7 +6690,7 @@ Prefab:
         type: 2}
       propertyPath: levelManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 723669257}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b31f084b27b865945be8f76a41a3449f, type: 2}
   m_IsPrefabParent: 0
