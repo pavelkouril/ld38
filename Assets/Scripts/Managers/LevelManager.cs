@@ -27,7 +27,7 @@ namespace RUF.Managers
 
         public void Update()
         {
-            if (uiManager.AllowKeyInputs && uiManager.CanRestartLevel && Input.GetButton("Submit"))
+            if (uiManager && uiManager.AllowKeyInputs && uiManager.CanRestartLevel && Input.GetButton("Submit"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
