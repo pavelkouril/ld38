@@ -43,7 +43,6 @@ namespace RUF
         private IEnumerator SwitchColor()
         {
             int i = 1;
-            string s = "";
             while (true)
             {
                 RemainingTime -= 0.1f;
@@ -86,8 +85,6 @@ namespace RUF
                             NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
                         } while (NextColor == FFColor);
                     }
-
-                    s += ((int)NextColor).ToString();
                     i++;
                 }
                 yield return new WaitForSeconds(0.1f);
