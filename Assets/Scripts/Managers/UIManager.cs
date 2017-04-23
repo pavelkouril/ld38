@@ -57,7 +57,6 @@ public class UIManager : MonoBehaviour
         }
         if (Input.GetButtonUp("Cancel"))
         {
-            Debug.Log(PreventPauseMenu);
             if (!AllowKeyInputs)
             {
                 LeanTween.alpha(IntroTextPanel.GetComponent<RectTransform>(), 0, 1).setUseEstimatedTime(true).setOnComplete(() =>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RUF.Breakables
 {
-    public class BreakableBody : MonoBehaviour
+    public class BreakableBodyVoronoi : MonoBehaviour
     {
         public GameObject OriginalObject;
         public GameObject ReplaceObject;
@@ -15,31 +15,24 @@ namespace RUF.Breakables
         {
             if (other.CompareTag("Destroyer"))
             {
-                if (tag == "Wall")
-                {
-                    ApplyGravityOnBody(GetComponent<Rigidbody>());
-                }
-                else
-                {
-                    mBodies = new List<Rigidbody>();
-                    mOffsets = new List<float>();
+                mBodies = new List<Rigidbody>();
+                mOffsets = new List<float>();
 
-                    OriginalObject.SetActive(false);
-                    ReplaceObject.SetActive(true);
-                    foreach (var rb in GetComponentsInChildren<Rigidbody>())
+                OriginalObject.SetActive(false);
+                ReplaceObject.SetActive(true);
+                foreach (var rb in GetComponentsInChildren<Rigidbody>())
+                {
+                    if (rb.gameObject != gameObject)
                     {
-                        if (rb.gameObject != gameObject)
-                        {
-                            rb.isKinematic = true;
-                            rb.useGravity = false;
-                            mBodies.Add(rb);
-                            mOffsets.Add(Time.time + Random.value * 1.25f);
-                        }
-                        else
-                        {
-                            Destroy(gameObject.GetComponent<Rigidbody>());
-                            Destroy(gameObject.GetComponent<Collider>());
-                        }
+                        rb.isKinematic = true;
+                        rb.useGravity = false;
+                        mBodies.Add(rb);
+                        mOffsets.Add(Time.time + Random.value * 1.25f);
+                    }
+                    else
+                    {
+                        Destroy(gameObject.GetComponent<Rigidbody>());
+                        Destroy(gameObject.GetComponent<Collider>());
                     }
                 }
             }
@@ -65,7 +58,7 @@ namespace RUF.Breakables
                         remove.Add(i);
                     }
                 }
-                
+
                 if (remove.Count == mBodies.Count)
                 {
                     mBodies = null;
