@@ -116,7 +116,7 @@ public class UIManager : MonoBehaviour
     {
         LevelComplete.SetActive(true);
         ColorPanel.SetActive(false);
-        LeanTween.alpha(LevelComplete.GetComponent<RectTransform>(), 1, 10).setUseEstimatedTime(true).setOnComplete(() =>
+        LeanTween.alpha(LevelComplete.GetComponent<RectTransform>(), 1, 6).setUseEstimatedTime(true).setOnComplete(() =>
         {
             levelManager.LoadNextLevel();
         });

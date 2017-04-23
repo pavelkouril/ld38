@@ -21,7 +21,7 @@ public class Teleport : MonoBehaviour
             {
                 hand.IsAnimating = true;
             }
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2);
             levelManager.LevelComplete();
         }
     }
