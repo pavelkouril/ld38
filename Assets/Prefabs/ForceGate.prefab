@@ -133,8 +133,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265764807002848}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: -1}
+  m_LocalRotation: {x: 0.00037984797, y: 0.7074482, z: -0.00031503418, w: 0.7067651}
+  m_LocalPosition: {x: -1, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4257029769044824}
@@ -315,8 +315,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.21343084, y: 1.6914649, z: 1.94213}
-  m_Center: {x: 1.0496206, y: 0.9804146, z: -0.008498549}
+  m_Size: {x: 0.2, y: 2, z: 2}
+  m_Center: {x: 1, y: 1, z: 0}
 --- !u!65 &65691577305730664
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -327,7 +327,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12, y: 0.1, z: 10}
+  m_Size: {x: 12, y: 0.15, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82048976381742756
 AudioSource:
@@ -452,7 +452,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.25
+  m_Radius: 2
   m_Height: 20
   m_Direction: 1
   m_Center: {x: 0, y: 4.5, z: 0}
@@ -465,7 +465,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.25
+  m_Radius: 2
   m_Height: 20
   m_Direction: 1
   m_Center: {x: 0, y: 4.5, z: 0}

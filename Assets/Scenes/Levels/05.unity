@@ -2029,7 +2029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27df9ddf8899fd64e89b243959ba1d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  Speed: 2.2
   target: {fileID: 1828915595}
 --- !u!65 &318523145
 BoxCollider:
@@ -3788,7 +3788,7 @@ Prefab:
     - target: {fileID: 114716691762779842, guid: 0f78449f749cc1f448bf941517295c48,
         type: 2}
       propertyPath: FFColor
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1265764807002848, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_Name
@@ -9650,6 +9650,11 @@ Prefab:
       propertyPath: m_Name
       value: ForceGate (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 114716691762779842, guid: 0f78449f749cc1f448bf941517295c48,
+        type: 2}
+      propertyPath: FFColor
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
   m_IsPrefabParent: 0
@@ -11722,7 +11727,7 @@ Prefab:
     - target: {fileID: 114716691762779842, guid: 0f78449f749cc1f448bf941517295c48,
         type: 2}
       propertyPath: FFColor
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1265764807002848, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_Name
@@ -12291,7 +12296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27df9ddf8899fd64e89b243959ba1d5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 2.8
   target: {fileID: 1667978216}
 --- !u!65 &1964700793
 BoxCollider:

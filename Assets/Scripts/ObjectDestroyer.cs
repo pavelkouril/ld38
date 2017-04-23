@@ -24,7 +24,7 @@ namespace RUF
             {
                 if (collider.size.x > 1)
                 {
-                    collider.size = collider.size - new Vector3(1, 1, 1);
+                    collider.size = collider.size - new Vector3(0.66f, 0.66f, 0.66f);
                 }
                 else
                 {
