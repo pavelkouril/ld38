@@ -13,13 +13,17 @@ namespace RUF
 
         private IEnumerator switchColCoroutine;
 
+        int last0 = 0;
+        int last1 = 0;
+        int last2 = 0;
+
         private void Awake()
         {
             switchColCoroutine = SwitchColor();
             NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
             StartCoroutine(switchColCoroutine);
         }
-       
+
         public void ForceColor(ForceFieldColors.Values col)
         {
             StopCoroutine(switchColCoroutine);
@@ -38,6 +42,8 @@ namespace RUF
 
         private IEnumerator SwitchColor()
         {
+            int i = 1;
+            string s = "";
             while (true)
             {
                 RemainingTime -= 0.1f;
@@ -45,12 +51,45 @@ namespace RUF
                 {
                     RemainingTime = UnityEngine.Random.Range(2f, 3f);
                     FFColor = NextColor;
+
+                    switch (FFColor)
+                    {
+                        case ForceFieldColors.Values.Cyan:
+                            last0 = i;
+                            break;
+                        case ForceFieldColors.Values.Purple:
+                            last1 = i;
+                            break;
+                        case ForceFieldColors.Values.Yellow:
+                            last2 = i;
+                            break;
+                    }
+
                     gameObject.layer = ForceFieldColors.ConvertToPlayerPhysicsLayer(FFColor);
 
-                    do
+                    if (i - last0 >= 4)
                     {
-                        NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
-                    } while (NextColor == FFColor);
+                        NextColor = ForceFieldColors.Values.Cyan;
+                    }
+                    else if (i - last1 >= 4)
+                    {
+                        NextColor = ForceFieldColors.Values.Purple;
+                    }
+                    else if (i - last2 >= 4)
+                    {
+                        NextColor = ForceFieldColors.Values.Yellow;
+                    }
+                    else
+                    {
+                        do
+                        {
+                            NextColor = (ForceFieldColors.Values)UnityEngine.Random.Range(0, 3);
+                        } while (NextColor == FFColor);
+                    }
+
+                    s += ((int)NextColor).ToString();
+                    i++;
+                    Debug.Log(s);
                 }
                 yield return new WaitForSeconds(0.1f);
             }
