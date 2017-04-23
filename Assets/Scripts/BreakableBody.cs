@@ -8,6 +8,8 @@ namespace RUF
     {
         public GameObject OriginalObject;
         public GameObject ReplaceObject;
+        private List<Rigidbody> mBodies;
+        private List<float> mOffsets;
 
         private void OnTriggerExit(Collider other)
         {
@@ -19,11 +21,20 @@ namespace RUF
                 }
                 else
                 {
+                    mBodies = new List<Rigidbody>();
+                    mOffsets = new List<float>();
+
                     OriginalObject.SetActive(false);
                     ReplaceObject.SetActive(true);
                     foreach (var rb in GetComponentsInChildren<Rigidbody>())
                     {
-                        ApplyGravityOnBody(rb);
+                        if (rb.gameObject != gameObject)
+                        {
+                            rb.isKinematic = true;
+                            rb.useGravity = false;
+                            mBodies.Add(rb);
+                            mOffsets.Add(Time.time + Random.value * 2.5f);
+                        }
                     }
                 }
             }
@@ -33,7 +44,28 @@ namespace RUF
         {
             body.isKinematic = false;
             body.useGravity = true;
-            body.AddForce(new Vector3(0, Random.value * 100f, 0));
+        }
+
+        private void Update()
+        {
+            if (mBodies != null && mBodies.Count > 0)
+            {
+                List<int> remove = new List<int>();
+
+                for (int i = 0; i < mBodies.Count; i++)
+                {
+                    if (mOffsets[i] <= Time.time)
+                    {
+                        ApplyGravityOnBody(mBodies[i]);
+                        remove.Add(i);
+                    }
+                }
+                
+                if (remove.Count == mBodies.Count)
+                {
+                    mBodies = null;
+                }
+            }
         }
     }
 }
