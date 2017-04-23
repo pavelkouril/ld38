@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RUF
+namespace RUF.Breakables
 {
     public class BreakableBody : MonoBehaviour
     {
