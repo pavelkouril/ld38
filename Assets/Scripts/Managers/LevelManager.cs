@@ -25,6 +25,11 @@ namespace RUF.Managers
             }
         }
 
+        public void ResetLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
         public void Die()
         {
             uiManager.ShowDieScreen();
