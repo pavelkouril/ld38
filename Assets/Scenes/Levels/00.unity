@@ -846,7 +846,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &76598657
 Prefab:
@@ -3613,7 +3613,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &656648468
 MonoBehaviour:
@@ -4020,7 +4020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: (Press Escape key or START button to Continue)
+  m_Text: (Press Escape key or START button to Skip)
 --- !u!222 &746210997
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4337,34 +4337,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785469577}
---- !u!1 &811736974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 811736975}
-  m_Layer: 0
-  m_Name: Teleport
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &811736975
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 811736974}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.22, y: 0, z: -7.948}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821691127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,7 +5352,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1030238908
 MonoBehaviour:
@@ -6121,17 +6093,12 @@ MonoBehaviour:
   color: {fileID: 1192742709}
   nextColor: {fileID: 1135698798}
   playerColor: {fileID: 1254106623}
-  DieTexts:
-  - Git gud.
-  - Ohh, let's try it again, shall we?
-  - (insert funny remark)
-  - (intentionally left blank)
   DiePanel: {fileID: 1908478919}
   DieTextFlavor: {fileID: 48718995}
   IntroTextPanel: {fileID: 264255457}
   IntroTextText: {fileID: 568138687}
   IntroTexts:
-  - F1 (Help)
+  - '00: F1 (Help)'
   - Hey there.
   - Your world is becoming smaller and smaller.
   - Falling into eternal darkness, piece by piece.

@@ -17,7 +17,13 @@ public class UIManager : MonoBehaviour
     public Image nextColor;
     public PlayerColor playerColor;
 
-    public List<string> DieTexts = new List<string>();
+    private List<string> dieTexts = new List<string>()
+         {
+        "Git gud.",
+        "Ohh, let's try it again, shall we?",
+        "(insert funny remark)",
+        "(intentionally left blank)",
+    };
 
     public GameObject DiePanel;
     public Text DieTextFlavor;
@@ -119,7 +125,7 @@ public class UIManager : MonoBehaviour
     public void ShowDieScreen()
     {
         DiePanel.SetActive(true);
-        DieTextFlavor.text = DieTexts[UnityEngine.Random.Range(0, DieTexts.Count)];
+        DieTextFlavor.text = dieTexts[UnityEngine.Random.Range(0, dieTexts.Count)];
         LeanTween.alpha(DiePanel.GetComponent<RectTransform>(), 1, 1).setUseEstimatedTime(true).setOnComplete(() =>
         {
             CanRestartLevel = true;
