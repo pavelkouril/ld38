@@ -10,7 +10,7 @@ namespace RUF.Tutorial
 
         private void Update()
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * 5);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * 4.25f);
         }
     }
 }
