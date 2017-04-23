@@ -48,9 +48,26 @@ namespace RUF.Managers
             uiManager.ShowCompleteScreen();
         }
 
+        public int ReadSavedLevelNumber()
+        {
+            if (File.Exists(Filename))
+            {
+                try
+                {
+                    return int.Parse(File.ReadAllLines(Filename)[0]);
+                }
+                catch (Exception _)
+                {
+                    return 0;
+                }
+            }
+
+            return 0;
+        }
+
         private void RecordLatestLevel()
         {
-            if (true)
+            if (LevelNumber > ReadSavedLevelNumber())
             {
                 File.WriteAllLines(Filename, new string[] { LevelNumber.ToString() });
             }
