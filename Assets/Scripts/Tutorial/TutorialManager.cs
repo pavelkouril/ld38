@@ -20,13 +20,17 @@ namespace RUF.Tutorial
 
         private UIManager uiManager;
 
+        private void Awake()
+        {
+            uiManager = GetComponent<UIManager>();
+        }
+
         private void Start()
         {
+            uiManager.PreventPauseMenu = true;
             PlayerColorBehavior.enabled = false;
             PlayerColorIndicator.SetActive(false);
             PlayerColorUIPanel.SetActive(false);
-            uiManager = GetComponent<UIManager>();
-            uiManager.enabled = false;
             SwitchToState(0);
         }
 
@@ -34,45 +38,45 @@ namespace RUF.Tutorial
         {
             if (tutorialStateNumber > TutorialState)
             {
+                uiManager.PreventPauseMenu = true;
                 Time.timeScale = 0;
                 TutorialPanel.SetActive(true);
                 TutorialState = tutorialStateNumber;
                 switch (tutorialStateNumber)
                 {
                     case 0:
-                        TutorialText.text = "Hey. Your world is getting smaller and smaller, falling to eternal darkness piece by piece.\nEscape it!";
+                        TutorialText.text = "Don't worry; I will help you with escaping from this shithole (and yes, by shithole, I mean your world).";
                         break;
                     case 1:
-                        TutorialText.text = "But first, you will need to learn some basics.\nTry walking forward using the W key or a left Gamepad joystick.";
+                        TutorialText.text = "First, you will need to learn some basics.\nTry walking forward using the W key or left Gamepad joystick.";
                         break;
                     case 2:
-                        TutorialText.text = "Good. Really good. You are a natural.\nNow try walking in other directions by using ASD keys (or, again, left Gamepad joystick, duh).";
+                        TutorialText.text = "Good. Really good. You are a natural. (Who would have thought?)\nNow try walking in other directions by using ASD keys (or, again, left Gamepad joystick, duh).";
                         break;
                     case 3:
-                        TutorialText.text = "Wow. You even made it behind a corner! Great!\nBut don't worry, the journey is trickier than that. Walk a little bit more.";
+                        TutorialText.text = "Wow. You even made it behind a corner.\nDon't worry, your journey is gonna be trickier than that. Walk a little bit more.";
                         break;
                     case 4:
-                        TutorialText.text = "Totally a walking simulator, right?\nNah. Do you see the force field in front of you? Try to go through it.";
+                        TutorialText.text = "I bet you are thinking this is a walking simulator, right?\nNah. Do you see the force field in front of you? Try to go through it.";
                         break;
                     case 5:
-                        TutorialText.text = "Oh, you can't. Fooled you!\nYou will need your color matched to the color of the force field ... done! You can thank me later!";
+                        TutorialText.text = "Fooled you! You can't; your color will need to match the color of the force field.\nSee your color now? You can thank me later. (Or don't.)";
                         PlayerColorBehavior.enabled = true;
                         PlayerColorIndicator.SetActive(true);
                         PlayerColorBehavior.ForceColor(ForceFieldColors.Values.Purple);
                         break;
                     case 6:
-                        TutorialText.text = "\"But there are other colors as well? What should you do now?\", he asked.\nJust wait, the color switches after a while to another one.";
+                        TutorialText.text = "\"But there are other colors as well? What should I do now?\", he asked.\nJust wait, the color switches after a while to another one.";
                         PlayerColorBehavior.StartColorSwitching();
                         PlayerColorUIPanel.SetActive(true);
-                        uiManager.enabled = true;
                         break;
                     case 7:
-                        TutorialText.text = "Yeah, and remember when I told you about the world is falling piece by piece? I wasn't kidding.\nSo ... run, you fool!";
+                        TutorialText.text = "Yeah, and remember when I told you about the world falling piece by piece? I wasn't kidding.\nSo ... run, you fool!";
                         AllDestroyer.center = new Vector3(0, 10, 0);
                         MovingDestroy.enabled = true;
                         break;
                     case 8:
-                        TutorialText.text = "You made it? Congratulations! (I guess?)/nNow just go into the teleport, and buckle up for the real deal.";
+                        TutorialText.text = "You made it? Congratulations! /nNow just go into the teleport, and buckle up for the real deal.";
                         break;
                 }
             }
@@ -80,7 +84,7 @@ namespace RUF.Tutorial
 
         private void Update()
         {
-            if (Input.GetButtonUp("Submit"))
+            if (uiManager.AllowKeyInputs && Input.GetButtonUp("Submit"))
             {
                 if (TutorialState == 0)
                 {
@@ -90,6 +94,7 @@ namespace RUF.Tutorial
                 {
                     Time.timeScale = 1;
                     TutorialPanel.SetActive(false);
+                    uiManager.PreventPauseMenu = false;
                     TutorialText.text = "";
                 }
             }

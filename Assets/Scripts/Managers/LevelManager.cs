@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RUF.Managers
 {
@@ -14,6 +15,14 @@ namespace RUF.Managers
         private void Awake()
         {
             uiManager = GetComponent<UIManager>();
+        }
+
+        public void Update()
+        {
+            if (uiManager.AllowKeyInputs && uiManager.CanRestartLevel && Input.GetButton("Submit"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
 
         public void Die()
