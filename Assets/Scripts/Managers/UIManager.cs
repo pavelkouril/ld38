@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
+using RUF.Managers;
 
 public class UIManager : MonoBehaviour
 {
@@ -30,6 +31,15 @@ public class UIManager : MonoBehaviour
     public GameObject PauseMenu;
 
     public bool PreventPauseMenu { get; set; }
+
+    public GameObject LevelComplete;
+
+    private LevelManager levelManager;
+
+    private void Awake()
+    {
+        levelManager = GetComponent<LevelManager>();
+    }
 
     private void Start()
     {
@@ -98,7 +108,12 @@ public class UIManager : MonoBehaviour
 
     public void ShowCompleteScreen()
     {
-
+        LevelComplete.SetActive(true);
+        ColorPanel.SetActive(false);
+        LeanTween.alpha(LevelComplete.GetComponent<RectTransform>(), 1, 10).setUseEstimatedTime(true).setOnComplete(() =>
+        {
+            levelManager.LoadNextLevel();
+        });
     }
 
     public void ShowDieScreen()

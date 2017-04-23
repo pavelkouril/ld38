@@ -12,9 +12,16 @@ namespace RUF.Managers
 
         private UIManager uiManager;
 
+        const string Filename = "_dontTouchThis.txt";
+
         private void Awake()
         {
             uiManager = GetComponent<UIManager>();
+        }
+
+        private void Start()
+        {
+            RecordLatestLevel();
         }
 
         public void Update()
@@ -38,7 +45,26 @@ namespace RUF.Managers
         public void LevelComplete()
         {
             uiManager.ShowCompleteScreen();
-            Debug.Log("Complete!!");
+        }
+
+        private void RecordLatestLevel()
+        {
+            if (true) // LevelNumber < stord in Filename
+            {
+                // file.WriteLine(LevelNumber);
+            }
+        }
+
+        public void LoadNextLevel()
+        {
+            if (LevelNumber < 5)
+            {
+                SceneManager.LoadScene("0" + (LevelNumber + 1));
+            }
+            else
+            {
+                SceneManager.LoadScene("Credits");
+            }
         }
     }
 }

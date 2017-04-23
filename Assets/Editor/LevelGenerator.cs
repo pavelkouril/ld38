@@ -36,8 +36,8 @@ public class LevelGenerator
 
     static void Create(string name)
     {
-        Object ground = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/GroundTile.prefab", typeof(GameObject));
-        Object wall = AssetDatabase.LoadAssetAtPath("Assets/Protoype/Prefabs/Wall.prefab", typeof(GameObject));
+        Object ground = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/GroundTile.prefab", typeof(GameObject));
+        Object wall = AssetDatabase.LoadAssetAtPath("Assets/Prefabs/Wall.prefab", typeof(GameObject));
 
         var groundParent = new GameObject("Ground");
 
