@@ -39,9 +39,9 @@ GameObject:
   - component: {fileID: 4744587685955338}
   - component: {fileID: 54220881585172152}
   - component: {fileID: 114919434839477972}
-  - component: {fileID: 135777301786749334}
   - component: {fileID: 114103674294528844}
   - component: {fileID: 82048976381742756}
+  - component: {fileID: 65212808480526354}
   m_Layer: 0
   m_Name: ForceGate
   m_TagString: Wall
@@ -131,8 +131,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1265764807002848}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.027608, y: -9.273587, z: -0.27218437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4257029769044824}
@@ -140,7 +140,7 @@ Transform:
   - {fileID: 4707163027542324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23092813260841210
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -317,6 +317,18 @@ MeshCollider:
   m_InflateMesh: 1
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65212808480526354
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1265764807002848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21343084, y: 1.6914649, z: 1.94213}
+  m_Center: {x: 1.0496206, y: 0.9804146, z: -0.008498549}
 --- !u!82 &82048976381742756
 AudioSource:
   m_ObjectHideFlags: 1
@@ -328,9 +340,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 89041186d06c8f44aa72b94529b517f0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0
+  m_Volume: 0.15
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -431,15 +443,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545a015ad1884fb44a524d869924e948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &135777301786749334
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265764807002848}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}

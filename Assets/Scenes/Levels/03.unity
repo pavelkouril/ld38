@@ -7053,7 +7053,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4744587685955338, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.027608
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 4744587685955338, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_LocalPosition.y
@@ -7061,7 +7061,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4744587685955338, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.27218437
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 4744587685955338, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7086,6 +7086,11 @@ Prefab:
     - target: {fileID: 1265764807002848, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
       propertyPath: m_Name
       value: ForceGate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 82048976381742756, guid: 0f78449f749cc1f448bf941517295c48,
+        type: 2}
+      propertyPath: BypassListenerEffects
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f78449f749cc1f448bf941517295c48, type: 2}
@@ -12712,7 +12717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &722330658
 BoxCollider:
   m_ObjectHideFlags: 0
