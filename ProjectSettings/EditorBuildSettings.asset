@@ -12,20 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 21ed364bb02a7b348ac434c3e4834094
   - enabled: 1
-    path: Assets/Scenes/Levels/00-Tutorial.unity
-    guid: 5e30a6627b075db419e9b44c79cc11a4
+    path: Assets/Scenes/Levels/00.unity
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Levels/01-Enter.unity
-    guid: 5de26d2e1104d8c49a440d03f39dc902
+    path: Assets/Scenes/Levels/01.unity
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Levels/02.unity
-    guid: ec0df9041802cbd4289876048aa16bad
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Levels/03.unity
-    guid: 2b6bcea43269e534dae59016c45031cd
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Levels/04.unity
-    guid: 3283ee2e0eecb1142b6e2333906a8330
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Levels/05-Finale.unity
+    path: Assets/Scenes/Levels/05.unity
     guid: 00000000000000000000000000000000
