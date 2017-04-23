@@ -89,7 +89,6 @@ namespace RUF
 
                     s += ((int)NextColor).ToString();
                     i++;
-                    Debug.Log(s);
                 }
                 yield return new WaitForSeconds(0.1f);
             }
