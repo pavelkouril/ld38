@@ -84,7 +84,7 @@ namespace RUF.Tutorial
 
         private void Update()
         {
-            if (uiManager.AllowKeyInputs && Input.GetButtonUp("Submit"))
+            if (uiManager.AllowKeyInputs && !uiManager.PauseMenu.activeSelf && Input.GetButtonUp("Submit"))
             {
                 if (TutorialState == 0)
                 {

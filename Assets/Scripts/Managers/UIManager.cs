@@ -80,6 +80,7 @@ public class UIManager : MonoBehaviour
     public void PauseGame()
     {
         PauseMenu.SetActive(true);
+        PauseMenu.GetComponentInChildren<Button>().Select();
         Time.timeScale = 0;
         LeanTween.alpha(PauseMenu.GetComponent<RectTransform>(), 0.75f, 1).setUseEstimatedTime(true).setOnComplete(() =>
         {
