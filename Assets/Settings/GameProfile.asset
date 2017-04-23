@@ -36,16 +36,16 @@ MonoBehaviour:
         preset: 4
       taaSettings:
         jitterSpread: 1
-        sharpen: 3
+        sharpen: 1
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
     m_Enabled: 0
     m_Settings:
-      intensity: 4
+      intensity: 2
       radius: 0.4
       sampleCount: 16
-      downsampling: 1
+      downsampling: 0
       forceForwardCompatibility: 0
       ambientOnly: 0
       highPrecision: 0

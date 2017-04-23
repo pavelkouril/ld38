@@ -1,74 +1,66 @@
 fileFormatVersion: 2
-guid: 6b472e50703dd7d409b8de8b4985904a
-timeCreated: 1492978068
+guid: 3c824a244d8feca47ab324aeecc77a38
+timeCreated: 1492984080
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Camera
-    100002: Lamp
-    100004: mixamorig:Head
-    100006: mixamorig:HeadTop_End
-    100008: mixamorig:Hips
-    100010: mixamorig:LeftArm
-    100012: mixamorig:LeftFoot
-    100014: mixamorig:LeftForeArm
-    100016: mixamorig:LeftHand
-    100018: mixamorig:LeftLeg
-    100020: mixamorig:LeftShoulder
-    100022: mixamorig:LeftToe_End
-    100024: mixamorig:LeftToeBase
-    100026: mixamorig:LeftUpLeg
-    100028: mixamorig:Neck
-    100030: mixamorig:RightArm
-    100032: mixamorig:RightFoot
-    100034: mixamorig:RightForeArm
-    100036: mixamorig:RightHand
-    100038: mixamorig:RightLeg
-    100040: mixamorig:RightShoulder
-    100042: mixamorig:RightToe_End
-    100044: mixamorig:RightToeBase
-    100046: mixamorig:RightUpLeg
-    100048: mixamorig:Spine
-    100050: mixamorig:Spine1
-    100052: mixamorig:Spine2
-    100054: //RootNode
-    100056: Sphere.001
-    400000: Camera
-    400002: Lamp
-    400004: mixamorig:Head
-    400006: mixamorig:HeadTop_End
-    400008: mixamorig:Hips
-    400010: mixamorig:LeftArm
-    400012: mixamorig:LeftFoot
-    400014: mixamorig:LeftForeArm
-    400016: mixamorig:LeftHand
-    400018: mixamorig:LeftLeg
-    400020: mixamorig:LeftShoulder
-    400022: mixamorig:LeftToe_End
-    400024: mixamorig:LeftToeBase
-    400026: mixamorig:LeftUpLeg
-    400028: mixamorig:Neck
-    400030: mixamorig:RightArm
-    400032: mixamorig:RightFoot
-    400034: mixamorig:RightForeArm
-    400036: mixamorig:RightHand
-    400038: mixamorig:RightLeg
-    400040: mixamorig:RightShoulder
-    400042: mixamorig:RightToe_End
-    400044: mixamorig:RightToeBase
-    400046: mixamorig:RightUpLeg
-    400048: mixamorig:Spine
-    400050: mixamorig:Spine1
-    400052: mixamorig:Spine2
-    400054: //RootNode
-    400056: Sphere.001
-    4300000: Sphere.001
+    100000: mixamorig:Head
+    100002: mixamorig:HeadTop_End
+    100004: mixamorig:Hips
+    100006: mixamorig:LeftArm
+    100008: mixamorig:LeftFoot
+    100010: mixamorig:LeftForeArm
+    100012: mixamorig:LeftHand
+    100014: mixamorig:LeftLeg
+    100016: mixamorig:LeftShoulder
+    100018: mixamorig:LeftToe_End
+    100020: mixamorig:LeftToeBase
+    100022: mixamorig:LeftUpLeg
+    100024: mixamorig:Neck
+    100026: mixamorig:RightArm
+    100028: mixamorig:RightFoot
+    100030: mixamorig:RightForeArm
+    100032: mixamorig:RightHand
+    100034: mixamorig:RightLeg
+    100036: mixamorig:RightShoulder
+    100038: mixamorig:RightToe_End
+    100040: mixamorig:RightToeBase
+    100042: mixamorig:RightUpLeg
+    100044: mixamorig:Spine
+    100046: mixamorig:Spine1
+    100048: mixamorig:Spine2
+    100050: //RootNode
+    400000: mixamorig:Head
+    400002: mixamorig:HeadTop_End
+    400004: mixamorig:Hips
+    400006: mixamorig:LeftArm
+    400008: mixamorig:LeftFoot
+    400010: mixamorig:LeftForeArm
+    400012: mixamorig:LeftHand
+    400014: mixamorig:LeftLeg
+    400016: mixamorig:LeftShoulder
+    400018: mixamorig:LeftToe_End
+    400020: mixamorig:LeftToeBase
+    400022: mixamorig:LeftUpLeg
+    400024: mixamorig:Neck
+    400026: mixamorig:RightArm
+    400028: mixamorig:RightFoot
+    400030: mixamorig:RightForeArm
+    400032: mixamorig:RightHand
+    400034: mixamorig:RightLeg
+    400036: mixamorig:RightShoulder
+    400038: mixamorig:RightToe_End
+    400040: mixamorig:RightToeBase
+    400042: mixamorig:RightUpLeg
+    400044: mixamorig:Spine
+    400046: mixamorig:Spine1
+    400048: mixamorig:Spine2
+    400050: //RootNode
     7400000: mixamo.com
     9500000: //RootNode
-    13700000: Sphere.001
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -78,7 +70,14 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'mixamorig:LeftUpLeg'
+      : position error = 37.289036 mm\n\t'mixamorig:LeftLeg' : position error = 159.847183
+      mm\n\t'mixamorig:LeftFoot' : position error = 166.374466 mm\n\t'mixamorig:LeftToeBase'
+      : position error = 52.545036 mm\n\t'mixamorig:RightUpLeg' : position error =
+      37.305897 mm\n\t'mixamorig:RightLeg' : position error = 159.838913 mm\n\t'mixamorig:RightFoot'
+      : position error = 166.157700 mm\n\t'mixamorig:RightToeBase' : position error
+      = 54.550625 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -94,17 +93,17 @@ ModelImporter:
       name: mixamo.com
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 30
+      lastFrame: 25
       wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
+      orientationOffsetY: -3.65
+      level: -0.36
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -117,10 +116,6 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: Camera
-        weight: 1
-      - path: Lamp
-        weight: 1
       - path: mixamorig:Hips
         weight: 1
       - path: mixamorig:Hips/mixamorig:LeftUpLeg
@@ -132,7 +127,7 @@ ModelImporter:
       - path: mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase
         weight: 1
       - path: mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase/mixamorig:LeftToe_End
-        weight: 1
+        weight: 0
       - path: mixamorig:Hips/mixamorig:RightUpLeg
         weight: 1
       - path: mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
@@ -142,7 +137,7 @@ ModelImporter:
       - path: mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase
         weight: 1
       - path: mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase/mixamorig:RightToe_End
-        weight: 1
+        weight: 0
       - path: mixamorig:Hips/mixamorig:Spine
         weight: 1
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1
@@ -162,7 +157,7 @@ ModelImporter:
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head
         weight: 1
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/mixamorig:HeadTop_End
-        weight: 1
+        weight: 0
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder
         weight: 1
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm
@@ -171,15 +166,13 @@ ModelImporter:
         weight: 1
       - path: mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand
         weight: 1
-      - path: Sphere.001
-        weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.6
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -199,7 +192,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human:
@@ -537,7 +530,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 6b472e50703dd7d409b8de8b4985904a,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
