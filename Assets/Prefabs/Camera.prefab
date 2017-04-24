@@ -54,7 +54,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.17254902, g: 0.015686275, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
   excludeFarPixels: 0
   useRadialDistance: 0
   heightFog: 1
-  height: 1
-  heightDensity: 2
+  height: 0
+  heightDensity: 1
   startDistance: 0
   fogShader: {fileID: 4800000, guid: 70d8568987ac0499f952b54c7c13e265, type: 3}
 --- !u!124 &124526022469962326

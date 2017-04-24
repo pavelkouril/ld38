@@ -39,6 +39,25 @@ public class ThirdPersonCamera : MonoBehaviour
 
     void LateUpdate()
     {
+        float zoom = Input.GetAxis("Mouse ScrollWheel");
+        if (zoom < 0.0f)
+        {
+            if (DistanceUp < 4.5f)
+            {
+                DistanceUp *= 1.1f;
+                DistanceAway *= 1.1f;
+            }
+        } 
+        else if (zoom > 0.0f)
+        {
+            if (DistanceUp > 1.0f)
+            {
+                DistanceUp *= 0.9f;
+                DistanceAway *= 0.9f;
+            }
+        }
+
+
         //Offset of the targets transform (Since the pivot point is usually at the feet).
         Vector3 targetOffset = new Vector3(target.position.x, (target.position.y + 2f), target.position.z);
         Quaternion rotation = Quaternion.Euler(cameraHeight, rotateAround, cameraPan);

@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 23723596693516772}
   - component: {fileID: 65978205245759858}
   - component: {fileID: 65568608123779300}
+  - component: {fileID: 65822850073312742}
   m_Layer: 0
   m_Name: TeleportPad
   m_TagString: Untagged
@@ -723,8 +724,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.03, y: 0.25, z: 1.31}
-  m_Center: {x: -1.72, y: -0.12, z: 0}
+  m_Size: {x: 1.2069899, y: 0.13505691, z: 1.31}
+  m_Center: {x: -1.8084959, y: -0.17747165, z: 0}
 --- !u!65 &65603960211816860
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -737,6 +738,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.012, y: 2, z: 1.05}
   m_Center: {x: 0.45, y: 1, z: 0}
+--- !u!65 &65822850073312742
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318496693169052}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7182794, y: 0.2664596, z: 1.3091867}
+  m_Center: {x: -1.5636458, y: -0.11177051, z: 0.00040666928}
 --- !u!65 &65978205245759858
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -764,7 +777,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1

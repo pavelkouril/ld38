@@ -450,7 +450,6 @@ GameObject:
   - component: {fileID: 114876488495589534}
   - component: {fileID: 114540124765726102}
   - component: {fileID: 114661721582555262}
-  - component: {fileID: 114528057829911528}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Player
@@ -525,8 +524,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981603285794988}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.153, z: 6.405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.104, z: -1.781}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4219323495432378}
@@ -984,20 +983,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerColor: {fileID: 114540124765726102}
---- !u!114 &114528057829911528
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1981603285794988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c104e4ee2dfdbb47bc80ac629e87bb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FFColor: 1
-  RemainingTime: 0.1
-  NextColor: 0
 --- !u!114 &114540124765726102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1030,7 +1015,7 @@ MonoBehaviour:
   m_RunCycleLegOffset: 0.2
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.1
+  m_GroundCheckDistance: 0.5
 --- !u!114 &114876488495589534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1051,7 +1036,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.33
+  m_Radius: 0.3
   m_Height: 1.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}

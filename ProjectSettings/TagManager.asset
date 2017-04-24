@@ -21,8 +21,8 @@ TagManager:
   - PlayerYellow
   - PlayerCyan
   - PlayerPurple
-  - 
-  - 
+  - IgnoreReflections
+  - IgnoreLighting
   - 
   - 
   - 
