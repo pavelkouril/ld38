@@ -6,8 +6,24 @@ namespace RUF
 {
     public class GameMusicSound : MonoBehaviour
     {
-        private void Awake()
+        private static GameMusicSound instance = null;
+
+        public static GameMusicSound Instance
         {
+            get { return instance; }
+        }
+
+        void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            else
+            {
+                instance = this;
+            }
             DontDestroyOnLoad(gameObject);
         }
     }
