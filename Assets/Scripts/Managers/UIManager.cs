@@ -23,6 +23,9 @@ public class UIManager : MonoBehaviour
         "Ohh, let's try it again, shall we?",
         "(insert funny remark)",
         "(intentionally left blank)",
+        "Don't die on me.",
+        "Yes, you totally did.",
+        "Rekt.",
     };
 
     public GameObject DiePanel;
