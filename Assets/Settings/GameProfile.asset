@@ -85,17 +85,17 @@ MonoBehaviour:
   eyeAdaptation:
     m_Enabled: 1
     m_Settings:
-      lowPercent: 34.812866
-      highPercent: 84.81288
+      lowPercent: 1
+      highPercent: 51.000023
       minLuminance: -16
       maxLuminance: 1
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
-      speedUp: 0.2
-      speedDown: 0.1
-      logMin: -8
-      logMax: 4
+      speedUp: 2
+      speedDown: 1
+      logMin: -16
+      logMax: 16
   bloom:
     m_Enabled: 1
     m_Settings:
