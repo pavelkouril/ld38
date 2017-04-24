@@ -79,11 +79,14 @@ public class UIManager : MonoBehaviour
             if (!AllowKeyInputs)
             {
                 IntroTextPanel.SetActive(false);
-                LeanTween.alpha(IntroTextPanel.GetComponent<RectTransform>(), 0, 1).setUseEstimatedTime(true).setOnComplete(() =>
+                LeanTween.alpha(IntroTextPanel.GetComponent<RectTransform>(), 0, 0.3f).setUseEstimatedTime(true).setOnComplete(() =>
                 {
                     IntroTextPanel.SetActive(false);
                     AllowKeyInputs = true;
-                    Time.timeScale = 1;
+                    if (levelManager.LevelNumber != 0)
+                    {
+                        Time.timeScale = 1;
+                    }
                 });
             }
             else if (!PreventPauseMenu && !PauseMenu.activeSelf)
@@ -129,6 +132,7 @@ public class UIManager : MonoBehaviour
     public void ShowDieScreen()
     {
         DiePanel.SetActive(true);
+        PreventPauseMenu = true;
         DieTextFlavor.text = dieTexts[UnityEngine.Random.Range(0, dieTexts.Count)];
         LeanTween.alpha(DiePanel.GetComponent<RectTransform>(), 1, 1).setUseEstimatedTime(true).setOnComplete(() =>
         {
@@ -156,10 +160,13 @@ public class UIManager : MonoBehaviour
             {
                 IntroTextPanel.SetActive(false);
                 AllowKeyInputs = true;
-                Time.timeScale = 1;
+                if (levelManager.LevelNumber != 0)
+                {
+                    Time.timeScale = 1;
+                }
             });
         }
-    }
+    }   
 
     public void QuitToMainMenu()
     {

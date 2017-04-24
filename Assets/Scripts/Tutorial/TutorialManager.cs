@@ -45,7 +45,7 @@ namespace RUF.Tutorial
                 switch (tutorialStateNumber)
                 {
                     case 0:
-                        TutorialText.text = "Don't worry; I will help you with escaping from this shithole (and yes, by shithole, I mean your world).";
+                        TutorialText.text = "Don't worry; I will help you with escaping from this shithole.";
                         break;
                     case 1:
                         TutorialText.text = "First, you will need to learn some basics.\nTry walking forward using the W key or left Gamepad joystick.";
@@ -76,7 +76,7 @@ namespace RUF.Tutorial
                         MovingDestroy.enabled = true;
                         break;
                     case 8:
-                        TutorialText.text = "You made it? Congratulations! /nNow just go into the teleport, and buckle up for the real deal.";
+                        TutorialText.text = "You made it? Congratulations!\nNow just go into the teleport, and buckle up for the real deal.";
                         break;
                 }
             }
