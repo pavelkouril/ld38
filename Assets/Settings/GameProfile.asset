@@ -86,7 +86,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       lowPercent: 1
-      highPercent: 86.908424
+      highPercent: 92.465675
       minLuminance: -16
       maxLuminance: 8
       keyValue: 0.25
@@ -94,7 +94,7 @@ MonoBehaviour:
       adaptationType: 0
       speedUp: 2
       speedDown: 1
-      logMin: -6
+      logMin: -5
       logMax: 4
   bloom:
     m_Enabled: 1
