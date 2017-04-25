@@ -5126,7 +5126,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4584281412670326, guid: 0c38879e9c30aa04d9feed36c7740d91, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 42.981
+      value: 40.98
       objectReference: {fileID: 0}
     - target: {fileID: 4584281412670326, guid: 0c38879e9c30aa04d9feed36c7740d91, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5155,10 +5155,6 @@ Prefab:
     - target: {fileID: 4584281412670326, guid: 0c38879e9c30aa04d9feed36c7740d91, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584281412670326, guid: 0c38879e9c30aa04d9feed36c7740d91, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c38879e9c30aa04d9feed36c7740d91, type: 2}
@@ -5530,7 +5526,7 @@ TerrainCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976749755}
   m_Material: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_TerrainData: {fileID: 15600000, guid: 8c0e1f18c944a4f41b844933459f156c, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &976749757
