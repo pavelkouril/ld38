@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.17254902, g: 0.015686275, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.03
+  m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 0
+  m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
+  m_IndirectSpecularColor: {r: 0.027250074, g: 0.012402854, b: 0.0017211423, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1497,7 +1497,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -4670,7 +4670,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -5265,7 +5265,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -6264,7 +6264,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -6476,7 +6476,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -9283,7 +9283,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -11256,7 +11256,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -11317,7 +11317,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
@@ -14243,7 +14243,7 @@ ReflectionProbe:
     m_Bits: 4294950911
   m_IntensityMultiplier: 1
   m_BlendDistance: 1
-  m_HDR: 0
+  m_HDR: 1
   m_BoxProjection: 1
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
