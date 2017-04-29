@@ -57,6 +57,14 @@ ModelImporter:
     100098: Cube_cell.069_Mesh.521
     100100: Cube_cell.070_Mesh.522
     100102: Cube_cell_Mesh.479
+    100104: Cube_cell.001_Mesh.007
+    100106: Cube_cell.002_Mesh.008
+    100108: Cube_cell.003_Mesh.009
+    100110: Cube_cell.004_Mesh.010
+    100112: Cube_cell.005_Mesh.011
+    100114: Cube_cell.006_Mesh.012
+    100116: Cube_cell.007_Mesh.013
+    100118: Cube_cell_Mesh.006
     400000: default
     400002: //RootNode
     400004: Cube_cell.001_Mesh.480
@@ -109,6 +117,14 @@ ModelImporter:
     400098: Cube_cell.069_Mesh.521
     400100: Cube_cell.070_Mesh.522
     400102: Cube_cell_Mesh.479
+    400104: Cube_cell.001_Mesh.007
+    400106: Cube_cell.002_Mesh.008
+    400108: Cube_cell.003_Mesh.009
+    400110: Cube_cell.004_Mesh.010
+    400112: Cube_cell.005_Mesh.011
+    400114: Cube_cell.006_Mesh.012
+    400116: Cube_cell.007_Mesh.013
+    400118: Cube_cell_Mesh.006
     2300000: default
     2300002: Cube_cell.001_Mesh.480
     2300004: Cube_cell.003_Mesh.523
@@ -160,6 +176,14 @@ ModelImporter:
     2300096: Cube_cell.069_Mesh.521
     2300098: Cube_cell.070_Mesh.522
     2300100: Cube_cell_Mesh.479
+    2300102: Cube_cell.001_Mesh.007
+    2300104: Cube_cell.002_Mesh.008
+    2300106: Cube_cell.003_Mesh.009
+    2300108: Cube_cell.004_Mesh.010
+    2300110: Cube_cell.005_Mesh.011
+    2300112: Cube_cell.006_Mesh.012
+    2300114: Cube_cell.007_Mesh.013
+    2300116: Cube_cell_Mesh.006
     3300000: default
     3300002: Cube_cell.001_Mesh.480
     3300004: Cube_cell.003_Mesh.523
@@ -211,6 +235,14 @@ ModelImporter:
     3300096: Cube_cell.069_Mesh.521
     3300098: Cube_cell.070_Mesh.522
     3300100: Cube_cell_Mesh.479
+    3300102: Cube_cell.001_Mesh.007
+    3300104: Cube_cell.002_Mesh.008
+    3300106: Cube_cell.003_Mesh.009
+    3300108: Cube_cell.004_Mesh.010
+    3300110: Cube_cell.005_Mesh.011
+    3300112: Cube_cell.006_Mesh.012
+    3300114: Cube_cell.007_Mesh.013
+    3300116: Cube_cell_Mesh.006
     4300000: default
     4300002: Cube_cell.001_Mesh.480
     4300004: Cube_cell.003_Mesh.523
@@ -262,6 +294,14 @@ ModelImporter:
     4300096: Cube_cell.069_Mesh.521
     4300098: Cube_cell.070_Mesh.522
     4300100: Cube_cell_Mesh.479
+    4300102: Cube_cell.001_Mesh.007
+    4300104: Cube_cell.002_Mesh.008
+    4300106: Cube_cell.003_Mesh.009
+    4300108: Cube_cell.004_Mesh.010
+    4300110: Cube_cell.005_Mesh.011
+    4300112: Cube_cell.006_Mesh.012
+    4300114: Cube_cell.007_Mesh.013
+    4300116: Cube_cell_Mesh.006
   materials:
     importMaterials: 1
     materialName: 0

@@ -50,7 +50,7 @@ namespace RUF.Managers
 
         public int ReadSavedLevelNumber()
         {
-            if (File.Exists(Filename))
+            /*if (File.Exists(Filename))
             {
                 try
                 {
@@ -60,17 +60,17 @@ namespace RUF.Managers
                 {
                     return 0;
                 }
-            }
+            }*/
 
-            return 0;
+            return 5;
         }
 
         private void RecordLatestLevel()
         {
-            if (LevelNumber > ReadSavedLevelNumber())
+            /*if (LevelNumber > ReadSavedLevelNumber())
             {
                 File.WriteAllLines(Filename, new string[] { LevelNumber.ToString() });
-            }
+            }*/
         }
 
         public void LoadNextLevel()
